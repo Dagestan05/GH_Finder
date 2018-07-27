@@ -29,4 +29,14 @@ class UI {
     <h3 class="page-heading mb-3">Latest Repos</h3>
     <div id="repos"></div>`;
   }
+  showAlert(message, className){
+    this.profile.innerHTML=''
+    const div = document.createElement('div');
+    div.className = className;
+    div.appendChild(document.createTextNode(message));
+    this.profile.appendChild(div)
+  }
+  clearProfile(){
+    this.profile.innerHTML = '';
+  }
 }
